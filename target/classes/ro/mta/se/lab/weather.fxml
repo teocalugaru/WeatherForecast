@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ro.mta.se.lab.Classes.WeatherController">
+   <children>
+      <ChoiceBox fx:id="country_box" layoutX="100.0" layoutY="86.0" prefWidth="150.0" />
+      <Label alignment="CENTER" layoutX="191.0" layoutY="29.0" prefHeight="26.0" prefWidth="187.0" text="WEATHER FORECAST" textFill="#000000ea">
+         <font>
+            <Font name="Dubai Bold" size="18.0" />
+         </font></Label>
+      <Label layoutX="35.0" layoutY="90.0" prefHeight="18.0" prefWidth="54.0" text="Country" />
+      <Label layoutX="335.0" layoutY="90.0" text="City" />
+      <Label fx:id="muie" alignment="CENTER" layoutX="79.0" layoutY="168.0" prefHeight="32.0" prefWidth="103.0" text="Country, City">
+         <font>
+            <Font name="Dubai Bold" size="18.0" />
+         </font></Label>
+      <Label fx:id="weather" alignment="CENTER" contentDisplay="CENTER" layoutX="100.0" layoutY="200.0" prefWidth="61.0" text="Weather">
+         <font>
+            <Font name="Dubai Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="410.0" layoutY="175.0" prefHeight="18.0" prefWidth="83.0" text="Temperature:">
+         <font>
+            <Font name="Dubai Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="420.0" layoutY="239.0" prefHeight="18.0" prefWidth="62.0" text="Humidity:">
+         <font>
+            <Font name="Dubai Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="414.0" layoutY="285.0" text="Wind Speed:">
+         <font>
+            <Font name="Dubai Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="424.0" layoutY="322.0" text="Pressure:">
+         <font>
+            <Font name="Dubai Bold" size="14.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="city_box" layoutX="389.0" layoutY="87.0" prefWidth="150.0" />
+      <Label fx:id="temperature" layoutX="505.0" layoutY="175.0" prefHeight="26.0" prefWidth="75.0">
+         <font>
+            <Font name="Dubai Bold" size="14.0" />
+         </font></Label>
+      <Label fx:id="feels_like" layoutX="501.0" layoutY="203.0" prefHeight="26.0" prefWidth="83.0">
+         <font>
+            <Font name="Dubai Bold" size="14.0" />
+         </font></Label>
+      <Label fx:id="humidity" layoutX="504.0" layoutY="239.0" prefHeight="18.0" prefWidth="70.0">
+         <font>
+            <Font name="Dubai Bold" size="14.0" />
+         </font></Label>
+      <Label fx:id="wind_speed" layoutX="504.0" layoutY="285.0" prefHeight="18.0" prefWidth="70.0">
+         <font>
+            <Font name="Dubai Bold" size="14.0" />
+         </font></Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="414.0" layoutY="203.0" prefHeight="18.0" prefWidth="75.0" text="Feels Like:">
+         <font>
+            <Font name="Dubai Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="pressure" layoutX="505.0" layoutY="321.0" prefHeight="26.0" prefWidth="75.0">
+         <font>
+            <Font name="Dubai Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

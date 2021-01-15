@@ -2,14 +2,25 @@ package ro.mta.se.lab.Classes;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.net.URL;
+import java.net.URLConnection;
+import org.json.JSONObject;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
 public class Server {
     public void read_config(String file_path){
         ArrayList<State> states=new ArrayList<State>();
         int ok;
         try {
+
             File myObj = new File(file_path);
             Scanner myReader = new Scanner(myObj);
             while (myReader.hasNextLine()) {
@@ -30,18 +41,30 @@ public class Server {
                     states.add(new_state);
                 }
             }
+            Variables.statesList=new ArrayList<State>();
+            Variables.statesList=states;
             myReader.close();
-            for(State i: states){
-                //System.out.println(i.getCode());
-                String output="Statul cu codul "+i.getCode()+" are urmatoarele orase:";
-                System.out.println(output);
-                for(City j: i.getCities()) {
-                    System.out.println(j.getName());
-                }
-            }
         } catch (FileNotFoundException e) {
             System.out.println("An error occurred.");
             e.printStackTrace();
         }
+    }
+    public JSONObject read_from_server(String city){
+        JSONObject json = null;
+        String URL=Variables.URL;
+        String key=Variables.key;
+        try {
+            HttpClient client = HttpClient.newHttpClient();
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(URI.create(URL + city + "&appid=" + key))
+                    .build();
+            HttpResponse response = client.send(request, HttpResponse.BodyHandlers.ofString());
+            json = new JSONObject(response.body().toString());
+        }
+        catch (IOException | InterruptedException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+        return json;
     }
 }
