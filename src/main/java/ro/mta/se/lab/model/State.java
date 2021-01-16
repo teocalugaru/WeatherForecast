@@ -1,9 +1,9 @@
-package ro.mta.se.lab.Classes;
-
-import ro.mta.se.lab.Classes.City;
+package ro.mta.se.lab.model;
 
 import java.util.ArrayList;
-
+/**
+ * This class is used for representing the country
+ * */
 public class State {
     private ArrayList<City> cities;
     private String code;

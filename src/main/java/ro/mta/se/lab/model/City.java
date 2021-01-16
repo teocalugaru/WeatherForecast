@@ -1,5 +1,7 @@
-package ro.mta.se.lab.Classes;
-
+package ro.mta.se.lab.model;
+/**
+ * This class is used for representing the city
+ * */
 public class City {
     private int id;
     private String name;

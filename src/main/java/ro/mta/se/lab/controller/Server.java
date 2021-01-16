@@ -1,21 +1,31 @@
-package ro.mta.se.lab.Classes;
+package ro.mta.se.lab.controller;
+
+import org.json.JSONObject;
+import ro.mta.se.lab.model.City;
+import ro.mta.se.lab.model.State;
+import ro.mta.se.lab.model.Variables;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Scanner;
-import java.net.URL;
-import java.net.URLConnection;
-import org.json.JSONObject;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.util.ArrayList;
+import java.util.Scanner;
+/**
+ * This singletone class is used for take information from weather_server and for reading from config_file
+ * */
 public class Server {
+    private static Server instance = null;
+    static public Server getInstance()
+    {
+        if(instance == null){
+            instance = new Server();
+        }
+        return instance;
+    }
     public void read_config(String file_path){
         ArrayList<State> states=new ArrayList<State>();
         int ok;
