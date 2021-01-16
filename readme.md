@@ -10,4 +10,4 @@ si Server(aceasta citeste informatiile din fisierul de configurare si face reque
 Fisierul de configurare a fost folosit pentru a introduce statele si orasele la care utilizatorul are acces.
 Va exista si un fisier de log unde vor fi scrise informatii de fiecare data cand utilizatorul alege un alt oras sau un alt stat.
 
-!(http://www.stirimeteo.com/wp-content/uploads/2018/11/GIFMaker.org_cXxiro.gif)
+![image](http://www.stirimeteo.com/wp-content/uploads/2018/11/GIFMaker.org_cXxiro.gif)
