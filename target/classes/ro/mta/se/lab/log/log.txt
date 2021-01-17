@@ -1,0 +1,18 @@
+Application started...Log file was created successfully!
+User chose the city Razvilka from RU
+The result of the search:Weather Mist, Temperature: -22.3 Celsius , Feels like: -26.7 Celsius
+User chose the city Moscow from RU
+The result of the search:Weather Mist, Temperature: -21.4 Celsius , Feels like: -25.9 Celsius
+User chose the city Ankara from TR
+The result of the search:Weather Snow, Temperature: -2.4 Celsius , Feels like: -8.3 Celsius
+User chose the city Porto from POR
+The result of the search:Weather Clear, Temperature: 8.0 Celsius , Feels like: 6.5 Celsius
+User chose the city Barcelone from ESP
+The result of the search:Weather Clear, Temperature: 10.1 Celsius , Feels like: 7.8 Celsius
+User chose the city Madrid from ESP
+The result of the search:Weather Clear, Temperature: 1.7 Celsius , Feels like: -1.6 Celsius
+User chose the city Barcelone from ESP
+The result of the search:Weather Clear, Temperature: 10.1 Celsius , Feels like: 7.8 Celsius
+User chose the city London from GBR
+The result of the search:Weather Clouds, Temperature: 5.0 Celsius , Feels like: 1.0 Celsius
+

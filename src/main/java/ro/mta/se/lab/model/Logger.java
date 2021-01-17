@@ -9,7 +9,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 /**
- * This class is used for the logs
+ * This class is used for the logs//it was good a timestamp for logs too
  * */
 public class Logger {
     private static Logger instance = null;

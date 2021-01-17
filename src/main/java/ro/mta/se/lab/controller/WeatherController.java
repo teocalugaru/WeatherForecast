@@ -35,7 +35,7 @@ public class WeatherController {
     @FXML
     private Label feels_like;
     @FXML
-    private Label muie;
+    private Label here;
     public void set_labels()
     {
         temperature.setText("Temperature:");
@@ -43,7 +43,7 @@ public class WeatherController {
         humidity.setText("Humidity:");
         wind_speed.setText("Wind Speed:");
         pressure.setText("Pressure:");
-        muie.setText("City,Country");
+        here.setText("City,Country");
     }
     public void clear()
     {
@@ -53,6 +53,7 @@ public class WeatherController {
         wind_speed.setText("");
         pressure.setText("");
         feels_like.setText("");
+        here.setText("");
     }
     @FXML
     private void initialize(){
@@ -90,9 +91,9 @@ public class WeatherController {
                                             } catch (IOException e) {
                                                 e.printStackTrace();
                                             }
-                                            String loc = city_box.getValue() + "," + country_box.getValue();
-                                            muie.setText(city_box.getValue());
                                             set_labels();
+                                            String loc = city_box.getValue() + ", " + country_box.getValue();
+                                            here.setText(loc);
                                             JSONObject jsonObject = S.read_from_server(city_box.getValue());
                                             String temperature_val= String.format("%.1f",(jsonObject.getJSONObject("main").getDouble("temp") - 272.15));
                                             String feels_like_val=String.format("%.1f",(jsonObject.getJSONObject("main").getDouble("feels_like") - 272.15));

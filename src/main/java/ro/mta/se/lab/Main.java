@@ -2,6 +2,7 @@ package ro.mta.se.lab;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import ro.mta.se.lab.model.*;
 import javafx.fxml.FXMLLoader;
